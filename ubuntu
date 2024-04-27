@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="usr,nvim,tmux,zsh"
-    # replace bin by usr
+    STOW_FOLDERS="bin,nvim,tmux,zsh"
     # STOW_FOLDERS="bin,i3,netflix,nvim,personal,tmux,uwuntu,xkb,zsh"
 fi
 
