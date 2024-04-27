@@ -120,5 +120,6 @@ export NVM_DIR="$HOME/.nvm"
 # where my tmux scripts are stored
 export PATH="$HOME/.local/scripts":$PATH
 export PATH="$HOME/.local/bin":$PATH
-export USERCFG="$HOME/Documents/repertoires/user.cfg"
+# TODO : usercfg to dotfiles
+export USERCFG="$HOME/user.cfg"
 bindkey -s ^f "tmux-sessionizer.sh\n"
