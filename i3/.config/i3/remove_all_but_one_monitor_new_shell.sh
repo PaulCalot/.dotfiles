@@ -17,6 +17,7 @@ if ! grep -qw \"\$main_monitor\" <<< \"\$connected_monitors\"; then \
     read -p \"Press enter to exit...\"; \
     exit 1; \
 fi; \
+xrandr --auto; \
 for monitor in \$connected_monitors; do \
     if [ \"\$monitor\" = \"\$main_monitor\" ]; then \
         xrandr --output \"\$monitor\" --auto; \
