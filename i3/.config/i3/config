@@ -25,7 +25,10 @@ font pango:monospace 8
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
+# bindsym $mod+Shift+L exec i3lock
+# bindsym $mod+Shift+L exec i3lock -c 000000
+# TODO: change maybe the hotkey ? l is already taken
+bindsym $mod+Shift+p exec i3lock -c 000000
 # trying to solve issue...
 bindsym $mod+Shift+w exec --no-startup-id ~/.config/i3/laptop.sh
 bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/remove_all_but_one_monitor_new_shell.sh
