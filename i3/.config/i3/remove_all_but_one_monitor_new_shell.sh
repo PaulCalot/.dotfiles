@@ -8,6 +8,8 @@ terminal_emulator="xterm" # or replace with gnome-terminal, alacritty, etc.
 #   (\w+[-\d*]+)
 # "\\s\\s\\(\\w+[-\\d*]+\\)"
 $terminal_emulator -e "bash -c '\
+echo \"Resetting monitors...\"; \
+xrandr --auto; \
 echo \"Enter the monitor you want to keep on (e.g., HDMI-1):\"; \
 read main_monitor; \
 connected_monitors=\$(xrandr --listmonitors | grep -oP \"\\s\\s(\\w+[\-\\d*]+)\"); \
@@ -17,7 +19,6 @@ if ! grep -qw \"\$main_monitor\" <<< \"\$connected_monitors\"; then \
     read -p \"Press enter to exit...\"; \
     exit 1; \
 fi; \
-xrandr --auto; \
 for monitor in \$connected_monitors; do \
     if [ \"\$monitor\" = \"\$main_monitor\" ]; then \
         xrandr --output \"\$monitor\" --auto; \
