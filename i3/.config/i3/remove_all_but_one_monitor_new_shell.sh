@@ -10,10 +10,10 @@ terminal_emulator="xterm" # or replace with gnome-terminal, alacritty, etc.
 $terminal_emulator -e "bash -c '\
 echo \"Resetting monitors...\"; \
 xrandr --auto; \
+connected_monitors=\$(xrandr --listmonitors | grep -oP \"\\s\\s(\\w+[\-\\d*]+)\"); \
+echo \"List of connected monitors : \"\$connected_monitors; \
 echo \"Enter the monitor you want to keep on (e.g., HDMI-1):\"; \
 read main_monitor; \
-connected_monitors=\$(xrandr --listmonitors | grep -oP \"\\s\\s(\\w+[\-\\d*]+)\"); \
-echo \$connected_monitors; \
 if ! grep -qw \"\$main_monitor\" <<< \"\$connected_monitors\"; then \
     echo \"Unknown monitor: \$main_monitor\"; \
     read -p \"Press enter to exit...\"; \
