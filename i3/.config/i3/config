@@ -191,8 +191,5 @@ bar {
 # gotcha
 bindsym $mod+Tab workspace 10; exec xterm -e ~/.config/i3/show_gotcha.sh
 bindsym Mod1+Tab workspace 10; exec xterm -e ~/.config/i3/show_gotcha.sh
-bindsym Control+Tab workspace 10; exec xterm -e ~/.config/i3/show_gotcha.sh
-# bindsym Control+Tab exec xterm -e ~/.config/i3/show_gotcha.sh
-# bindsym $mod+Tab exec xterm -e ~/.config/i3/show_gotcha.sh
-# bindsym $mod+Tab exec --no-startup-id ~/.config/i3/show_gotcha.sh
+# bindsym Control+Tab workspace 10; exec xterm -e ~/.config/i3/show_gotcha.sh
 # bindsym --release $mod+Tab exec --no-startup-id ~/.config/i3/hide_gotcha.sh
