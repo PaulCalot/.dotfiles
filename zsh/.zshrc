@@ -124,4 +124,5 @@ export PATH="$HOME/.local/bin":$PATH
 export USERCFG="$HOME/user.cfg"
 bindkey -s ^f "tmux-sessionizer.sh\n"
 
-alias claude-docker='docker compose -f ~/claude-home/docker-compose.yml run --rm claude claude'
+alias claude-docker='docker compose -f ~/.claude-docker/docker-compose.yml run --rm claude claude'
+
