@@ -124,7 +124,6 @@ export PATH="$HOME/.local/bin":$PATH
 export USERCFG="$HOME/user.cfg"
 bindkey -s ^f "tmux-sessionizer.sh\n"
 
-alias claude-docker='docker compose -f ~/.claude-docker/compose.yaml run --rm claude'
 
 alias claude-docker-danger='UID=$(id -u) GID=$(id -g) docker compose -f ~/.claude-docker/compose.yaml run --rm -it claude --dangerously-skip-permissions'
 alias claude-docker='UID=$(id -u) GID=$(id -g) docker compose -f ~/.claude-docker/compose.yaml run --rm -it claude'
