@@ -117,7 +117,7 @@ alias vim="nvim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# where my tmux scripts are stored
+# where my tmux scripts are stored
 export PATH="$HOME/.local/scripts":$PATH
 export PATH="$HOME/.local/bin":$PATH
 # TODO : usercfg to dotfiles
@@ -126,3 +126,5 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 
 alias claude-docker='docker compose -f ~/.claude-docker/compose.yaml run --rm claude'
 
+alias claude-docker-danger='UID=$(id -u) GID=$(id -g) docker compose -f ~/.claude-docker/compose.yaml run --rm -it claude --dangerously-skip-permissions'
+alias claude-docker='UID=$(id -u) GID=$(id -g) docker compose -f ~/.claude-docker/compose.yaml run --rm -it claude'
